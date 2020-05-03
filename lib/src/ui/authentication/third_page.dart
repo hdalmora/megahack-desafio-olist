@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:megahackdesafioolist/src/utils/values/colors.dart';
+import 'package:megahackdesafioolist/src/utils/values/constants.dart';
 
 class ThirdPageHome extends StatelessWidget {
 
@@ -36,12 +37,15 @@ class ThirdPageHome extends StatelessWidget {
 
             SizedBox(height: 30.0,),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Flexible(
                   flex: 1,
                   child: GestureDetector(
                     onTap: onSellerButtonClick,
                     child: Container(
+                      width: Constants.MediaScreenBreakpoint(context) ? Constants.MediaWidth(context)*.20 : Constants.MediaWidth(context)*.45,
                       margin: EdgeInsets.only(top: 35.0, right: 10.0, left: 10),
                       alignment: Alignment.center,
                       height: 70.0,
@@ -66,6 +70,7 @@ class ThirdPageHome extends StatelessWidget {
                   child: GestureDetector(
                     onTap: onConsumerButtonClick,
                     child: Container(
+                      width: Constants.MediaScreenBreakpoint(context) ? Constants.MediaWidth(context)*.20 : Constants.MediaWidth(context)*.45,
                       margin: EdgeInsets.only(top: 35.0, left: 10.0, right: 10),
                       alignment: Alignment.center,
                       height: 70.0,

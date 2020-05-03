@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:megahackdesafioolist/src/utils/values/colors.dart';
+import 'package:megahackdesafioolist/src/utils/values/constants.dart';
 
 class FirstPageHome extends StatelessWidget {
 
@@ -68,6 +69,7 @@ class FirstPageHome extends StatelessWidget {
               onTap: onGoogleButtonTap,
               child: Container(
                 margin: EdgeInsets.only(top: 60.0, left: 30, right: 30),
+                width: Constants.MediaScreenBreakpoint(context) ? Constants.MediaWidth(context)*.20 : Constants.MediaWidth(context)*.45,
                 alignment: Alignment.center,
                 height: 70.0,
                 decoration: BoxDecoration(
@@ -78,7 +80,7 @@ class FirstPageHome extends StatelessWidget {
                   "ENTRAR COM O GOOGLE",
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                       fontWeight: FontWeight.w500
                   ),
                 ),
