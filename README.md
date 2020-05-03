@@ -1,4 +1,4 @@
-# megahackdesafioolist
+# MegaHack Desafio Olist
 
 App desenvolvido durante a Hackaton MegaHack - Desafio Olist
 
