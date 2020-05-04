@@ -17,6 +17,7 @@ dependencies:
   cloud_firestore: ^0.13.5
   google_sign_in: ^4.1.0
   splashscreen: ^1.2.0
+  cached_network_image: ^2.2.0
 
 dev_dependencies:
   flutter_test:

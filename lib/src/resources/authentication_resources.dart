@@ -9,6 +9,7 @@ class AuthenticationResources {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   Stream<FirebaseUser> get onAuthStateChange => _firebaseAuth.onAuthStateChanged;
+  Future<FirebaseUser> get currentUser => _firebaseAuth.currentUser();
 
   Future<int> signWithGoogle(String role) async {
     try {
