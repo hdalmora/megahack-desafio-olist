@@ -16,4 +16,6 @@ class Repository {
 
   /// Firestore
   Stream<DocumentSnapshot> userDoc(String userUUID) => _firestoreResources.userDOc(userUUID);
+  Future<QuerySnapshot> getRandomProduct() => _firestoreResources.getRandomProduct();
+  Future<void> addUserPoints(String userUID, double pointsToAdd) => _firestoreResources.addUserPoints(userUID, pointsToAdd);
 }

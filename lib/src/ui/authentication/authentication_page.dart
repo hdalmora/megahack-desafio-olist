@@ -14,6 +14,7 @@ class AuthenticationPage extends StatefulWidget {
 }
 
 class _AuthenticationPageState extends State<AuthenticationPage> {
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   final _pageController = PageController(
     initialPage: 0
@@ -32,9 +33,15 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
     super.initState();
   }
 
+  void showErrorMessage(String message) {
+    final snackbar = SnackBar(content: Text(message), duration: new Duration(seconds: 2));
+    _scaffoldKey.currentState.showSnackBar(snackbar);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: OlistColors.colorMainBlue,
       body: Container(
         child: PageView(
@@ -55,7 +62,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                 await _authBloc.authWithGoogle("CONSUMER");
               },
               onSellerButtonClick: () async {
-                await _authBloc.authWithGoogle("SELLER");
+                showErrorMessage("Essa feature ainda está em desenvolvimento ='(. Mas tente o botãozinho aí do lado, você vai curtir ! =D");
               },
             ),
           ],
